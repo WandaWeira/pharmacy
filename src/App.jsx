@@ -1,11 +1,10 @@
 import React from "react";
+import SideBar from "./components/SideBar";
 
 const App = () => {
   return (
     <>
-      <div className="bg-blue-500 text-white p-4">
-        <h1> Tailwind is working</h1>
-      </div>
+      <SideBar />
     </>
   );
 };
