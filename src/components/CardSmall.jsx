@@ -1,4 +1,10 @@
-import { MdLocalHospital, MdOutlineArrowForwardIos, MdMoney, MdMedication, MdDangerous } from "react-icons/md";
+import {
+  MdLocalHospital,
+  MdOutlineArrowForwardIos,
+  MdMoney,
+  MdMedication,
+  MdDangerous,
+} from "react-icons/md";
 
 const CardSmall = () => {
   return (
