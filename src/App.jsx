@@ -4,10 +4,12 @@ import SideBar from "./components/SideBar";
 
 const App = () => {
   return (
-    <>
-      <Dashboard />
+    <div className="flex">
       <SideBar />
-    </>
+      <div className="flex-1">
+        <Dashboard />
+      </div>
+    </div>
   );
 };
 

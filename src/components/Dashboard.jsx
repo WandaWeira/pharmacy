@@ -1,5 +1,6 @@
 import { MdArrowDropDown } from "react-icons/md";
 import CardSmall from "./CardSmall";
+import CardLarge from "./CardLarge";
 
 const Dashboard = () => {
   return (
@@ -15,6 +16,7 @@ const Dashboard = () => {
         </button>
       </div>
       <CardSmall />
+      <CardLarge />
     </div>
   );
 };
