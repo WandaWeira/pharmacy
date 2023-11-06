@@ -39,12 +39,12 @@ const CardLarge = () => {
           </div>
           <div className="flex justify-between mt-4">
             <div>
-              <h2 className="font-bold text-lg">298</h2>
-              <h3 className="font-semibold">Total no of Medicines</h3>
+              <h2 className="font-bold text-lg">70,856</h2>
+              <h3 className="font-semibold">Qty of Medicines sold</h3>
             </div>
             <div>
-              <h2 className="font-bold text-lg">24</h2>
-              <h3 className="font-semibold">Medicine Groups</h3>
+              <h2 className="font-bold text-lg">5,288</h2>
+              <h3 className="font-semibold">Invoices Generated</h3>
             </div>
           </div>
         </div>
@@ -63,12 +63,12 @@ const CardLarge = () => {
           </div>
           <div className="flex justify-between mt-4">
             <div>
-              <h2 className="font-bold text-lg">298</h2>
-              <h3 className="font-semibold">Total no of Medicines</h3>
+              <h2 className="font-bold text-lg">04</h2>
+              <h3 className="font-semibold">Total no of Suppliers</h3>
             </div>
             <div>
-              <h2 className="font-bold text-lg">24</h2>
-              <h3 className="font-semibold">Medicine Groups</h3>
+              <h2 className="font-bold text-lg">05</h2>
+              <h3 className="font-semibold">Total no of Users</h3>
             </div>
           </div>
         </div>
@@ -85,12 +85,12 @@ const CardLarge = () => {
           </div>
           <div className="flex justify-between mt-4">
             <div>
-              <h2 className="font-bold text-lg">298</h2>
-              <h3 className="font-semibold">Total no of Medicines</h3>
+              <h2 className="font-bold text-lg">845</h2>
+              <h3 className="font-semibold">Total no of Customers</h3>
             </div>
             <div>
-              <h2 className="font-bold text-lg">24</h2>
-              <h3 className="font-semibold">Medicine Groups</h3>
+              <h2 className="font-bold text-lg">Weira</h2>
+              <h3 className="font-semibold">Frequently bought items</h3>
             </div>
           </div>
         </div>
