@@ -16,6 +16,9 @@ You can try our system's user interface by visiting the Figma template. Click th
 
 [![Figma](https://imgs.search.brave.com/wgeRbgMNfCmtdZ2Gqw36UDy-4TfwVAbAcvlpjM-JP8M/rs:fit:560:320:1/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi8zLzMzL0Zp/Z21hLWxvZ28uc3Zn/LzUxMnB4LUZpZ21h/LWxvZ28uc3ZnLnBu/Zw)](https://www.figma.com/file/tG6dLYqSF3nmtZjnDVgxF7/Dashboard---Pharmacy-Management-(Community)?type=design&node-id=33-549&mode=design&t=QPPKAuI3gwB1zoqb-0)
 
+## Project management
+[![Trello](https://imgs.search.brave.com/iaK3AcD5wIXlSK5WttN_tew5e5YANGjLwxqRLYG9MKI/rs:fit:560:320:1/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy83/LzdhL1RyZWxsby1s/b2dvLWJsdWUuc3Zn.svg)](https://trello.com/b/4uVlcLXV/pharmacy)
+
 ## Getting Started
 
 To use the Pharmacy Management System, follow these steps:
