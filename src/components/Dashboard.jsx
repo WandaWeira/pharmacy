@@ -4,7 +4,7 @@ import CardLarge from "./CardLarge";
 
 const Dashboard = () => {
   return (
-    <div className="m-8 text-gray-800">
+    <>
       <div className="flex justify-between">
         <div className="">
           <h2 className="text-xl font-bold">Dashboard</h2>
@@ -17,7 +17,7 @@ const Dashboard = () => {
       </div>
       <CardSmall />
       <CardLarge />
-    </div>
+    </>
   );
 };
 
