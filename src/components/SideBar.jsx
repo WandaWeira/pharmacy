@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import profileImage from "../assets/profile-image.jpeg";
 import { VscKebabVertical } from "react-icons/vsc";
@@ -45,14 +45,18 @@ const SideBar = () => {
           </div>
         </div>
         <div className="h-[0px] border border-gray-600" />
-        <div className="group flex items-center gap-4 py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
-          <MdOutlineSpaceDashboard className="text-white" />
-          <p className="text-white text-sm font-poppins">Dashboard</p>
-        </div>
-        <div className="group flex items-center gap-4 py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
-          <MdOutlineInventory2 className="text-white" />
-          <p className="text-white text-sm font-poppins">Inventory</p>
-        </div>
+        <Link to="/">
+          <div className="group flex items-center gap-4 py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
+            <MdOutlineSpaceDashboard className="text-white" />
+            <p className="text-white text-sm font-poppins">Dashboard</p>
+          </div>
+        </Link>
+        <Link to="/inventory">
+          <div className="group flex items-center gap-4 py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
+            <MdOutlineInventory2 className="text-white" />
+            <p className="text-white text-sm font-poppins">Inventory</p>
+          </div>
+        </Link>
         <div className="group flex items-center gap-4 py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
           <TbReportAnalytics className="text-white" />
           <p className="text-white text-sm font-poppins">Reports</p>
