@@ -4,7 +4,7 @@ import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 
 const SideBarItem = ({ dest, text, icon, chevron, children, chevronClick }) => {
   const chevronStyle = {
-    marginLeft: 'auto', // Aligns the chevron to the right
+    marginLeft: "auto", // Aligns the chevron to the right
   };
 
   return (
@@ -18,13 +18,14 @@ const SideBarItem = ({ dest, text, icon, chevron, children, chevronClick }) => {
             className="text-white text-xl"
             style={chevronStyle}
           />
-        ) : (
+        ) : null}
+        {chevron === false ? (
           <HiChevronDown
             onClick={chevronClick}
             className="text-white text-xl"
             style={chevronStyle}
           />
-        )}
+        ) : null}
       </div>
       {chevron && children}
     </Link>
