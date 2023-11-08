@@ -68,11 +68,15 @@ const SideBar = () => {
           chevron={subInventoryVisibility}
           chevronClick={() => setSubInvVisibility((prevState) => !prevState)}
         >
-          <div className="group flex items-center gap-4 py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
-            <p className="text-white text-sm font-poppins">List of Medicines</p>
-          </div>
-          <div className="group flex items-center gap-4 py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
-            <p className="text-white text-sm font-poppins">Medicine Groups</p>
+          <div className="bg-slate-900">
+            <div className="group flex items-center gap-4 py-4 px-14 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
+              <p className="text-white text-sm font-poppins">
+                List of Medicines
+              </p>
+            </div>
+            <div className="group flex items-center gap-4 py-4 px-14 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
+              <p className="text-white text-sm font-poppins">Medicine Groups</p>
+            </div>
           </div>
         </SideBarItem>
         <SideBarItem
@@ -84,16 +88,20 @@ const SideBar = () => {
             setSubReportsVisibility((prevState) => !prevState)
           }
         >
-          <Link to="#">
-            <div className="place-content-center py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
-              <p className="text-white text-sm font-poppins">Sales Report</p>
-            </div>
-          </Link>
-          <Link to="#">
-            <div className="self-center py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
-              <p className="text-white text-sm font-poppins">Payment Report</p>
-            </div>
-          </Link>
+          <div className="bg-slate-900">
+            <Link to="#">
+              <div className="place-content-center py-4 px-14 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
+                <p className="text-white text-sm font-poppins">Sales Report</p>
+              </div>
+            </Link>
+            <Link to="#">
+              <div className="self-center py-4 px-14 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
+                <p className="text-white text-sm font-poppins">
+                  Payment Report
+                </p>
+              </div>
+            </Link>
+          </div>
         </SideBarItem>
         <SideBarItem
           dest="#"
@@ -124,7 +132,6 @@ const SideBar = () => {
             </p>
           </div>
         </Link>
-
         <Link to="/covid19">
           <div className="group flex items-center gap-4 py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
             <FaVirusCovid className="text-white" />
