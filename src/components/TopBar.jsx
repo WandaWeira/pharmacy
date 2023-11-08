@@ -10,7 +10,7 @@ const TopBar = () => {
               <input
                 type="text"
                 placeholder="Search for anything here..."
-                className="py-2 pl-8 pr-4 w-full rounded border-2 border-gray-200 focus:outline-none focus:border-gray-300"
+                className="py-2 pl-8 pr-4 w-full rounded border-2 bg-slate-200 font-normal border-gray-200 focus:outline-none focus:border-gray-300"
               />
               <div className="absolute right-3 top-4">
                 <FaSearch className="text-gray-400" />
