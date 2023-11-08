@@ -13,7 +13,6 @@ import {
   MdPersonOutline,
   MdOutlineLogout
 } from "react-icons/md";
-import { FaRegFileExcel, FaRegFilePdf } from "react-icons/fa";
 import { TbReportAnalytics } from "react-icons/tb";
 import { VscSettings } from "react-icons/vsc";
 import { FaVirusCovid } from "react-icons/fa6";
