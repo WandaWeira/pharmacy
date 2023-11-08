@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import profileImage from "../assets/profile-image.jpeg";
@@ -9,11 +10,18 @@ import {
   MdNotificationsNone,
   MdOutlineMessage,
   MdOutlineHelpCenter,
+  MdPersonOutline,
+  MdOutlineLogout
 } from "react-icons/md";
+import { FaRegFileExcel, FaRegFilePdf } from "react-icons/fa";
 import { TbReportAnalytics } from "react-icons/tb";
 import { VscSettings } from "react-icons/vsc";
 import { FaVirusCovid } from "react-icons/fa6";
 const SideBar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
   return (
     <aside className="w-64 h-screen bg-gray-800">
       <div id="logo" className="flex items-center gap-4">
@@ -23,7 +31,7 @@ const SideBar = () => {
         </p>
       </div>
 
-      <div className="bg-slate-700 h-full">
+      <div className="bg-slate-700 h-full relative">
         <div id="profile" className="flex items-center py-[30px] gap-4">
           <div className=" ms-[24px] w-[42px] h-[42px]">
             <img
@@ -41,8 +49,26 @@ const SideBar = () => {
             </p>
           </div>
           <div>
-            <VscKebabVertical className="ms-[40px] text-white text-xl" />
+            <VscKebabVertical
+              className="ms-[40px] text-white text-xl"
+              onClick={toggleDropdown}
+            />
           </div>
+          {isDropdownOpen && (
+            <div className="absolute top-20 left-36 bg-white shadow-lg p-2 w-32 rounded">
+              <ul>
+                <li className="flex justify-between items-center m-2">
+                  <MdPersonOutline className="w-5" />
+                  <a href="">My Profile</a>
+                </li>
+                <p className="border border-gray-200"></p>
+                <li className="flex justify-evenly items-center m-2 text-red-500">
+                  <MdOutlineLogout className="w-5"/>
+                  <a href="">Logout</a>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
         <div className="h-[0px] border border-gray-600" />
         <Link to="/">
