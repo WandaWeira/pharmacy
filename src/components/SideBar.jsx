@@ -11,13 +11,19 @@ import {
   MdOutlineMessage,
   MdOutlineHelpCenter,
   MdPersonOutline,
-  MdOutlineLogout
+  MdOutlineLogout,
+  MdOutlineArrowDropDown,
 } from "react-icons/md";
 import { TbReportAnalytics } from "react-icons/tb";
 import { VscSettings } from "react-icons/vsc";
 import { FaVirusCovid } from "react-icons/fa6";
 const SideBar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isInventoryDropdownOpen, setIsInventoryDropdownOpen] = useState(false);
+
+  const toggleInventoryDropdown = () => {
+    setIsInventoryDropdownOpen(!isInventoryDropdownOpen);
+  };
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
@@ -62,7 +68,7 @@ const SideBar = () => {
                 </li>
                 <p className="border border-gray-200"></p>
                 <li className="flex justify-evenly items-center m-2 text-red-500">
-                  <MdOutlineLogout className="w-5"/>
+                  <MdOutlineLogout className="w-5" />
                   <a href="">Logout</a>
                 </li>
               </ul>
@@ -80,8 +86,30 @@ const SideBar = () => {
           <div className="group flex items-center gap-4 py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
             <MdOutlineInventory2 className="text-white" />
             <p className="text-white text-sm font-poppins">Inventory</p>
+            <MdOutlineArrowDropDown
+              className="text-white"
+              onClick={toggleInventoryDropdown}
+            />
           </div>
         </Link>
+        {isInventoryDropdownOpen && (
+          <div className="bg-slate-900 text-white">
+            <Link to="/medicineList">
+              <div className="group flex items-center gap-4 py-4 px-14 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
+                <p className="text-white text-sm font-poppins">
+                  List of Medicines
+                </p>
+              </div>
+            </Link>
+            <Link to="/medicineGroups">
+              <div className="group flex items-center gap-4 py-4 px-14 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
+                <p className="text-white text-sm font-poppins">
+                  Medicine Groups
+                </p>
+              </div>
+            </Link>
+          </div>
+        )}
         <Link to="/reports">
           <div className="group flex items-center gap-4 py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
             <TbReportAnalytics className="text-white" />
