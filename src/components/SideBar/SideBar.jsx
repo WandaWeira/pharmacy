@@ -20,7 +20,6 @@ import { FaVirusCovid } from "react-icons/fa6";
 
 import "../custom-scrollbar.css";
 import SideBarItem from "./SideBarItem";
-import { useState } from "react";
 import Hr from "./Hr";
 
 const SideBar = () => {
