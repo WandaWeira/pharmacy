@@ -73,7 +73,7 @@ const SideBar = () => {
             <MdMoreVert className="ms-[40px] text-white text-xl" />
           </div>
           <Hr />
-          <Link to="/">
+          <Link to="">
             <div className="group flex items-center gap-4 py-4 px-6 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
               <MdOutlineSpaceDashboard className="text-white" />
               <p className="text-white text-sm font-poppins">Dashboard</p>
