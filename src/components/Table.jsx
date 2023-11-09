@@ -1,5 +1,6 @@
 import React from "react";
 import { FiChevronsRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Table = () => {
   const data = [
@@ -85,12 +86,15 @@ const Table = () => {
               <td className="px-6 py-4 ">{item.groupName}</td>
               <td className="px-6 py-4 ">{item.stockInQty}</td>
               <td className="px-6 py-4  text-right">
-                <a
-                  href="#"
+              <Link
+                  to={{
+                    pathname: `/detail/${item.medicineID}`,
+                    state: { medicine: item },
+                  }}
                   className="font-medium flex items-center gap-2.5 hover:underline"
                 >
                   <span>View Full Detail</span> <FiChevronsRight />
-                </a>
+                </Link>
               </td>
             </tr>
           ))}

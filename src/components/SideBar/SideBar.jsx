@@ -94,11 +94,13 @@ const SideBar = () => {
                   </p>
                 </div>
               </Link>
-              <div className="group flex items-center gap-4 py-4 px-14 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
-                <p className="text-white text-sm font-poppins">
-                  Medicine Groups
-                </p>
-              </div>
+              <Link to="/medicineGroups">
+                <div className="group flex items-center gap-4 py-4 px-14 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
+                  <p className="text-white text-sm font-poppins">
+                    Medicine Groups
+                  </p>
+                </div>
+              </Link>
             </div>
           </SideBarItem>
           <SideBarItem
