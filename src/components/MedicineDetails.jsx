@@ -38,11 +38,10 @@ const MedicineDetails = () => {
           <h3>Edit Details</h3>
         </button>
       </div>
-      {/* <div> */}
       <div className="w-80 my-1 relative">
         <input
           type="text"
-          placeholder="Search fim medicine details..."
+          placeholder="Search for medicine details..."
           className="py-2 pl-8 pr-4 w-full rounded border-2 bg-slate-200 font-normal border-gray-200 focus:outline-none focus:border-gray-300"
         />
         <div className="absolute right-3 top-4">
