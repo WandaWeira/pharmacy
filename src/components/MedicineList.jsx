@@ -2,10 +2,12 @@ import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { BsFunnel } from "react-icons/bs";
 import { MdAdd, MdChevronRight, MdSearch } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Table from "./Table";
 
 const MedicineList = () => {
+  const navigateTo = useNavigate();
+
   return (
     <>
       <div className="flex justify-between">
@@ -25,7 +27,12 @@ const MedicineList = () => {
             List of medicines available for sales.
           </p>
         </div>
-        <button className="flex justify-between items-center rounded-lg p-2 border-2 text-white bg-red-500">
+        <button
+          onClick={() => {
+            navigateTo("/addNewMedicine");
+          }}
+          className="flex justify-between items-center rounded-lg p-2 border-2 text-white bg-red-500 hover:bg-red-600"
+        >
           <MdAdd className="w-5" />
           <h3>Add New Item</h3>
         </button>
@@ -48,10 +55,8 @@ const MedicineList = () => {
               type="input"
               className="w-[217px] h-[38px] focus:outline-none bg-white rounded border border-gray-800 border-opacity-30"
             >
-              <option value="" selected>
-                - Select Group -
-              </option>
-              <option></option>
+              <option value="">- Select Group -</option>
+              <option value=""></option>
             </select>
           </div>
         </div>

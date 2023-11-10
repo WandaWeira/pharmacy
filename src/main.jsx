@@ -14,6 +14,7 @@ import MedicineList from "./components/MedicineList";
 import MedicineGroups from "./components/MedicineGroups";
 import Dashboard from "./components/Dashboard";
 import MedicineDetails from "./components/MedicineDetails.jsx";
+import AddNewMedicine from "./components/AddNewMedicine.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="/inventory" element={<Inventory />} />
       <Route path="/medicineList" element={<MedicineList />} />
       <Route path="/detail/:itemId" element={<MedicineDetails />} />
+      <Route path="/addNewMedicine" element={<AddNewMedicine />} />
       <Route path="/medicineGroups" element={<MedicineGroups />} />
       <Route path="/reports" element={<Reports />} />
     </Route>
