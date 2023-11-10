@@ -1,8 +1,9 @@
 import React from "react";
 import { BiEdit } from "react-icons/bi";
-import { MdChevronRight } from "react-icons/md";
+import { MdChevronRight, MdDeleteOutline } from "react-icons/md";
 import { Link, useParams } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
+import CardDetails from "./CardDetails";
 import CardLarge from "./CardLarge";
 
 const MedicineDetails = () => {
@@ -37,18 +38,50 @@ const MedicineDetails = () => {
           <h3>Edit Details</h3>
         </button>
       </div>
-      <div>
-        <div className="w-80 my-8 relative">
-          <input
-            type="text"
-            placeholder="Search fim medicine details..."
-            className="py-2 pl-8 pr-4 w-full rounded border-2 bg-slate-200 font-normal border-gray-200 focus:outline-none focus:border-gray-300"
-          />
-          <div className="absolute right-3 top-4">
-            <FaSearch className="text-gray-400" />
-          </div>
+      {/* <div> */}
+      <div className="w-80 my-1 relative">
+        <input
+          type="text"
+          placeholder="Search fim medicine details..."
+          className="py-2 pl-8 pr-4 w-full rounded border-2 bg-slate-200 font-normal border-gray-200 focus:outline-none focus:border-gray-300"
+        />
+        <div className="absolute right-3 top-4">
+          <FaSearch className="text-gray-400" />
         </div>
-        <CardLarge />
+      </div>
+      <div className="flex gap-10 my-6">
+        <CardDetails
+          title="Inventory"
+          titleLink="Go to Configuration"
+          left="298"
+          leftDeails="Total no of Medicines"
+          right="24"
+          rightDeails="Medicine Groups"
+        />
+        <CardDetails
+          title="Inventory"
+          titleLink="Go to Configuration"
+          left="298"
+          leftDeails="Total no of Medicines"
+          right="24"
+          rightDeails="Medicine Groups"
+        />
+      </div>
+      <div className="my-2">
+        <CardLarge
+          title="How to use"
+          instruction="Take this medication by mouth with or without food as directed by your doctor, usually once daily."
+        />
+      </div>
+      <div className="my-2">
+        <CardLarge
+          title="Side Effects"
+          instruction="Dizziness, lightheadedness, drowsiness, nausea, vomiting, tiredness, excess saliva/drooling, blurred vision, weight gain, constipation, headache, and trouble sleeping may occur. If any of these effects persist or worsen, consult your doctor."
+        />
+      </div>
+      <div className="rounded border border-red-500 w-44 text-red-500 flex items-center p-2 my-8 text-sm">
+        <MdDeleteOutline className="w-14"/>
+        <button className="uppercase h-46 w-full">Delete medicine</button>
       </div>
     </>
   );

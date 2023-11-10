@@ -5,6 +5,7 @@ import {
   MdMedication,
   MdDangerous,
 } from "react-icons/md";
+import { FiChevronsRight } from "react-icons/fi";
 
 const CardSmall = () => {
   return (
@@ -19,10 +20,7 @@ const CardSmall = () => {
         </div>
         <div className="flex items-center justify-center bg-green-200 p-1">
           <h3 className="text-xs">View Detailed Report</h3>
-          <div className="flex ml-4">
-            <MdOutlineArrowForwardIos size="8" />
-            <MdOutlineArrowForwardIos size="8" />
-          </div>
+          <FiChevronsRight className="ml-2" />
         </div>
       </div>
       <div className="my-8 border-2 border-yellow-300 w-60 h-32 rounded text-center flex flex-col justify-between">
@@ -35,10 +33,7 @@ const CardSmall = () => {
         </div>
         <div className="flex items-center justify-center bg-yellow-200 p-1">
           <h3 className="text-xs">View Detailed Report</h3>
-          <div className="flex ml-4">
-            <MdOutlineArrowForwardIos size="8" />
-            <MdOutlineArrowForwardIos size="8" />
-          </div>
+          <FiChevronsRight className="ml-2" />
         </div>
       </div>
       <div className="my-8 border-2 border-blue-500 w-60 h-32 rounded text-center flex flex-col justify-between">
@@ -51,10 +46,7 @@ const CardSmall = () => {
         </div>
         <div className="flex items-center justify-center bg-blue-200 p-1">
           <h3 className="text-xs">Visit Inventory</h3>
-          <div className="flex ml-4">
-            <MdOutlineArrowForwardIos size="8" />
-            <MdOutlineArrowForwardIos size="8" />
-          </div>
+          <FiChevronsRight className="ml-2" />
         </div>
       </div>
       <div className="my-8 border-2 border-red-500 w-60 h-32 rounded text-center flex flex-col justify-between">
@@ -67,10 +59,7 @@ const CardSmall = () => {
         </div>
         <div className="flex items-center justify-center bg-red-200 p-1">
           <h3 className="text-xs">Resolve Now</h3>
-          <div className="flex ml-4">
-            <MdOutlineArrowForwardIos size="8" />
-            <MdOutlineArrowForwardIos size="8" />
-          </div>
+          <FiChevronsRight className="ml-2" />
         </div>
       </div>
     </div>
