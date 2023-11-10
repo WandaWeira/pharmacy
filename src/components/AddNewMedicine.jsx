@@ -1,8 +1,34 @@
+import { useState } from "react";
 import { MdChevronRight } from "react-icons/md";
-
 import { Link } from "react-router-dom";
 
+import data from "../data/data";
+
 const AddNewMedicine = () => {
+  const initialState = {
+    medicineName: "",
+    medicineID: "",
+    groupName: "",
+    stockInQty: "",
+    howToUse: "",
+    sideEffects: "",
+  };
+  const [medicineData, setMedicineData] = useState(initialState);
+
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+
+    console.log(
+      "form data",
+      medicineData.medicineName,
+      medicineData.medicineID,
+      medicineData.stockInQty,
+      medicineData.groupName,
+      medicineData.howToUse,
+      medicineData.sideEffects
+    );
+  };
+
   return (
     <>
       <div className="flex justify-between">
@@ -32,10 +58,10 @@ const AddNewMedicine = () => {
         </div>
       </div>
       <div className=" w-9/12">
-        <form className="my-6">
+        <form className="my-6" onSubmit={formSubmitHandler}>
           <div className="flex justify-between  my-3">
             <div className="flex flex-col">
-              <label for="medicine_name" className="text-sm font-normal">
+              <label htmlFor="medicine_name" className="text-sm font-normal">
                 Medicine Name
               </label>
               <input
@@ -43,10 +69,16 @@ const AddNewMedicine = () => {
                 id="medicine_name"
                 className="p-2 w-[340px] h-[38px]  rounded border-2 bg-slate-200 font-normal border-gray-200 focus:outline-none focus:border-gray-300"
                 required
+                onChange={({ target }) =>
+                  setMedicineData((prevState) => ({
+                    ...prevState,
+                    medicineName: target.value,
+                  }))
+                }
               />
             </div>
             <div className="flex flex-col">
-              <label for="medicine_id" className="text-sm font-normal">
+              <label htmlFor="medicine_id" className="text-sm font-normal">
                 Medicine ID
               </label>
               <input
@@ -54,24 +86,41 @@ const AddNewMedicine = () => {
                 id="medicine_id"
                 className="p-2 w-[340px] h-[38px]  rounded border-2 bg-slate-200 font-normal border-gray-200 focus:outline-none focus:border-gray-300"
                 required
+                onChange={({ target }) =>
+                  setMedicineData((prevState) => ({
+                    ...prevState,
+                    medicineID: target.value,
+                  }))
+                }
               />
             </div>
           </div>
           <div className="flex justify-between my-3">
             <div className="flex flex-col">
-              <label for="medicine_group" className="text-sm font-normal">
+              <label htmlFor="medicine_group" className="text-sm font-normal">
                 Medicine Group
               </label>
               <select
                 id="medicine_name"
                 className="p-2 w-[340px] h-[38px]  rounded border-2 bg-slate-200 font-normal border-gray-200 focus:outline-none focus:border-gray-300"
                 required
+                onChange={({ target }) =>
+                  setMedicineData((prevState) => ({
+                    ...prevState,
+                    groupName: target.value,
+                  }))
+                }
               >
-                <option>- Select Group -</option>
+                <option value="">- Select Group -</option>
+                {data.map((item, index) => (
+                  <option key={index} value={item.groupName}>
+                    {item.groupName}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="flex flex-col">
-              <label for="medicine_id" className="text-sm font-normal">
+              <label htmlFor="medicine_id" className="text-sm font-normal">
                 Quantity in Number
               </label>
               <input
@@ -80,11 +129,17 @@ const AddNewMedicine = () => {
                 id="medicine_id"
                 className="p-2 w-[340px] h-[38px]  rounded border-2 bg-slate-200 font-normal border-gray-200 focus:outline-none focus:border-gray-300"
                 required
+                onChange={({ target }) =>
+                  setMedicineData((prevState) => ({
+                    ...prevState,
+                    stockInQty: target.value,
+                  }))
+                }
               />
             </div>
           </div>
           <div className="flex flex-col my-2">
-            <label for="use" className="text-sm font-normal">
+            <label htmlFor="use" className="text-sm font-normal">
               How to Use
             </label>
             <textarea
@@ -92,10 +147,16 @@ const AddNewMedicine = () => {
               id="use"
               className="p-2  rounded border-2 bg-slate-200 font-normal border-gray-200 focus:outline-none focus:border-gray-300"
               required
+              onChange={({ target }) =>
+                setMedicineData((prevState) => ({
+                  ...prevState,
+                  howToUse: target.value,
+                }))
+              }
             />
           </div>
           <div className="flex flex-col my-2">
-            <label for="effects" className="text-sm font-normal">
+            <label htmlFor="effects" className="text-sm font-normal">
               Side Effects
             </label>
             <textarea
@@ -103,6 +164,12 @@ const AddNewMedicine = () => {
               id="effects"
               className="p-2  rounded border-2 bg-slate-200 font-normal border-gray-200 focus:outline-none focus:border-gray-300"
               required
+              onChange={({ target }) =>
+                setMedicineData((prevState) => ({
+                  ...prevState,
+                  sideEffects: target.value,
+                }))
+              }
             />
           </div>
           <button

@@ -1,11 +1,10 @@
 import React from "react";
 import { BiEdit } from "react-icons/bi";
 import { MdChevronRight } from "react-icons/md";
-import { Link, useParams  } from "react-router-dom";
-
+import { Link, useParams } from "react-router-dom";
+import data from "../data/data.js";
 
 const MedicineDetails = () => {
-
   const { itemId } = useParams();
   // Fetch medicine details based on itemId
 
@@ -22,15 +21,15 @@ const MedicineDetails = () => {
             <MdChevronRight />
             <Link to="/medicineList">
               <span className="text-gray-800 text-opacity-50 text-xl font-bold ">
-                List of Medicines (298)
+                List of Medicines ({data.length})
               </span>
             </Link>
             <MdChevronRight />
-            <span className="text-gray-800 text-xl font-bold ">
-              {itemId}
-            </span>
+            <span className="text-gray-800 text-xl font-bold ">{itemId}</span>
           </div>
-          <p className="text-gray-800 text-sm font-normal">List of medicines available for sales.</p>
+          <p className="text-gray-800 text-sm font-normal">
+            List of medicines available for sales.
+          </p>
         </div>
         <button className="flex justify-between items-center rounded-lg p-2 border-2 text-white bg-blue-500">
           <BiEdit className="w-5" />
