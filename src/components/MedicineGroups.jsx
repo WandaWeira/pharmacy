@@ -2,7 +2,7 @@ import { MdChevronRight, MdSearch, MdAdd } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import TableMedicinesGroups from "./Tables/TableMedicineGroup";
 
-import data from "../data/data.js";
+import { data } from "../data/data.js";
 import { useState } from "react";
 
 const MedicineGroups = () => {

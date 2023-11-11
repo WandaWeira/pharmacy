@@ -1,13 +1,12 @@
 import React from "react";
 import { BiEdit } from "react-icons/bi";
-import data from "../data/data.js";
 import { MdChevronRight, MdDeleteOutline } from "react-icons/md";
 import { Link, useParams } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import CardDetails from "./CardDetails";
 import CardLarge from "./CardLarge";
 
-
+import { data } from "../data/data.js";
 const MedicineDetails = () => {
   const { itemId } = useParams();
   // Fetch medicine details based on itemId
@@ -81,7 +80,7 @@ const MedicineDetails = () => {
         />
       </div>
       <div className="rounded border border-red-500 w-44 text-red-500 flex items-center p-2 my-8 text-sm">
-        <MdDeleteOutline className="w-14"/>
+        <MdDeleteOutline className="w-14" />
         <button className="uppercase h-46 w-full">Delete medicine</button>
       </div>
     </>

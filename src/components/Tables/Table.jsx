@@ -34,15 +34,15 @@ const Table = ({ data }) => {
               <td className="px-6 py-4 ">{item.medicineID}</td>
               <td className="px-6 py-4 ">{item.groupName}</td>
               <td className="px-6 py-4 ">{item.stockInQty}</td>
-              <td className="px-6 py-4  text-right">
+              <td className="px-2 py-4  text-left ">
                 <Link
                   to={{
                     pathname: `/detail/${item.medicineID}`,
                     state: { medicine: item },
                   }}
-                  className="font-medium flex items-center gap-2.5 hover:underline"
+                  className="font-medium flex items-center hover:underline"
                 >
-                  <span>View Full Detail</span> <FiChevronsRight />
+                  View Full Details <FiChevronsRight />
                 </Link>
               </td>
             </tr>

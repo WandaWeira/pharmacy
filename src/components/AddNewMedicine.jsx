@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MdChevronRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-import data from "../data/data";
+import { data, groupNames } from "../data/data.js";
 
 const AddNewMedicine = () => {
   const initialState = {
@@ -112,8 +112,8 @@ const AddNewMedicine = () => {
                 }
               >
                 <option value="">- Select Group -</option>
-                {data.map((item, index) => (
-                  <option key={index} value={item.groupName}>
+                {groupNames.map((item, index) => (
+                  <option key={item.id} value={item.groupName}>
                     {item.groupName}
                   </option>
                 ))}
