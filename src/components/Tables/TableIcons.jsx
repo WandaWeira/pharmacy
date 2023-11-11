@@ -1,4 +1,4 @@
-import data from "../../data/data";
+import {data} from "../../data/data";
 import { HiChevronUpDown } from "react-icons/hi2";
 import {MdOutlineDelete} from "react-icons/md"
 

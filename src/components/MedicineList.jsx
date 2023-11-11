@@ -4,7 +4,8 @@ import { MdAdd, MdChevronRight, MdSearch } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import Table from "./Tables/Table";
 
-import { data, groupNames } from "../data/data";
+import {groupNames}  from "../data/data";
+import  {data}  from "../data/data";
 
 const MedicineList = () => {
   const navigateTo = useNavigate();

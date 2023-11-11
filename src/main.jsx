@@ -16,6 +16,7 @@ import Dashboard from "./components/Dashboard";
 import MedicineDetails from "./components/MedicineDetails.jsx";
 import AddNewMedicine from "./components/AddNewMedicine.jsx";
 import MedicineGroupsDetails from "./components/MedicineGroupsDetails.jsx";
+import AddNewMedicineGroup from "./components/AddNewMedicineGroup.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
       <Route path="/detail/:itemId" element={<MedicineDetails />} />
       <Route path="/addNewMedicine" element={<AddNewMedicine />} />
       <Route path="/medicineGroups" element={<MedicineGroups />} />
+      <Route path="/addMedicineGroup" element={<AddNewMedicineGroup />} />
       <Route path="/groupDetail/:itemId" element={<MedicineGroupsDetails />} />
       <Route path="/reports" element={<Reports />} />
     </Route>
