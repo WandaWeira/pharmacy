@@ -1,10 +1,12 @@
 import React from "react";
 import { BiEdit } from "react-icons/bi";
+import data from "../data/data.js";
 import { MdChevronRight, MdDeleteOutline } from "react-icons/md";
 import { Link, useParams } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import CardDetails from "./CardDetails";
 import CardLarge from "./CardLarge";
+
 
 const MedicineDetails = () => {
   const { itemId } = useParams();
@@ -23,7 +25,7 @@ const MedicineDetails = () => {
             <MdChevronRight />
             <Link to="/medicineList">
               <span className="text-gray-800 text-opacity-50 text-xl font-bold ">
-                List of Medicines (298)
+                List of Medicines ({data.length})
               </span>
             </Link>
             <MdChevronRight />

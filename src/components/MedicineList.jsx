@@ -1,12 +1,29 @@
-import React from "react";
-import { FaSearch } from "react-icons/fa";
+import React, { useState } from "react";
 import { BsFunnel } from "react-icons/bs";
 import { MdAdd, MdChevronRight, MdSearch } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
-import Table from "./Table";
+import Table from "./Tables/Table";
+
+import data from "../data/data.js";
 
 const MedicineList = () => {
   const navigateTo = useNavigate();
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filterTerm, setFilterTerm] = useState("");
+
+  let filteredMedicines = data.filter(
+    (medicine) =>
+      medicine.medicineName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      medicine.groupName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  filteredMedicines = filterTerm
+    ? data.filter(
+        (medicine) =>
+          medicine.groupName.toLowerCase() === filterTerm.toLowerCase()
+      )
+    : filteredMedicines;
 
   return (
     <>
@@ -20,7 +37,7 @@ const MedicineList = () => {
             </Link>
             <MdChevronRight />
             <span className="text-gray-800 text-xl font-bold ">
-              List of Medicines (298)
+              List of Medicines ({filteredMedicines.length})
             </span>
           </div>
           <p className="text-gray-800 text-sm font-normal">
@@ -44,6 +61,10 @@ const MedicineList = () => {
               type="text"
               placeholder="Search medicine inventory..."
               className="py-2 pl-8 pr-4 w-[340px] h-[38px] rounded border-2 bg-slate-200 font-normal border-gray-200 focus:outline-none focus:border-gray-300"
+              onChange={({ target }) => {
+                setSearchTerm(target.value);
+                setFilterTerm("");
+              }}
             />
             <div className="absolute right-3 top-3">
               <MdSearch className="text-gray-400" />
@@ -54,14 +75,22 @@ const MedicineList = () => {
             <select
               type="input"
               className="w-[217px] h-[38px] focus:outline-none bg-white rounded border border-gray-800 border-opacity-30"
+              onChange={({ target }) => {
+                setFilterTerm(target.value);
+                setSearchTerm("");
+              }}
             >
               <option value="">- Select Group -</option>
-              <option value=""></option>
+              {data.map((item, index) => (
+                <option key={index} value={item.groupName}>
+                  {item.groupName}
+                </option>
+              ))}
             </select>
           </div>
         </div>
       </div>
-      <Table />
+      <Table data={filteredMedicines} />
     </>
   );
 };

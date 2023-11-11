@@ -11,7 +11,7 @@ import {
 import Inventory from "./components/Inventory";
 import Reports from "./components/Reports";
 import MedicineList from "./components/MedicineList";
-import MedicineGroups from "./components/MedicineGroups";
+import MedicineGroups from "./components/MedicineGroups.jsx";
 import Dashboard from "./components/Dashboard";
 import MedicineDetails from "./components/MedicineDetails.jsx";
 import AddNewMedicine from "./components/AddNewMedicine.jsx";
