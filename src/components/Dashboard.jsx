@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { MdArrowDropDown } from "react-icons/md";
-import {FaRegFileExcel, FaRegFilePdf} from 'react-icons/fa'
+import { FaRegFileExcel, FaRegFilePdf } from "react-icons/fa";
 import CardSmall from "./CardSmall";
-import CardLarge from "./CardLarge";
+import CardDetails from "./CardDetails";
+
 
 const Dashboard = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -27,12 +28,12 @@ const Dashboard = () => {
           <div className="absolute top-10 right-0 bg-white shadow-lg p-2 w-28 rounded">
             <ul>
               <li className="flex justify-evenly items-center m-2">
-                <FaRegFileExcel className="w-5"/>
+                <FaRegFileExcel className="w-5" />
                 <a href="">Excel</a>
               </li>
               <p className="border border-gray-200"></p>
               <li className="flex justify-evenly items-center m-2">
-                <FaRegFilePdf className="w-5"/>
+                <FaRegFilePdf className="w-5" />
                 <a href="">PDF</a>
               </li>
             </ul>
@@ -40,7 +41,42 @@ const Dashboard = () => {
         )}
       </div>
       <CardSmall />
-      <CardLarge />
+      <div className="flex gap-10 my-10">
+        <CardDetails
+          title="Inventory"
+          titleLink="Go to Configuration"
+          left="298"
+          leftDeails="Total no of Medicines"
+          right="24"
+          rightDeails="Medicine Groups"
+        />
+        <CardDetails
+          title="Inventory"
+          titleLink="Go to Configuration"
+          left="298"
+          leftDeails="Total no of Medicines"
+          right="24"
+          rightDeails="Medicine Groups"
+        />
+      </div>
+      <div className="flex gap-10 my-10">
+        <CardDetails
+          title="Inventory"
+          titleLink="Go to Configuration"
+          left="298"
+          leftDeails="Total no of Medicines"
+          right="24"
+          rightDeails="Medicine Groups"
+        />
+        <CardDetails
+          title="Inventory"
+          titleLink="Go to Configuration"
+          left="298"
+          leftDeails="Total no of Medicines"
+          right="24"
+          rightDeails="Medicine Groups"
+        />
+      </div>
     </>
   );
 };
