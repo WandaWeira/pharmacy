@@ -4,7 +4,7 @@ import { MdAdd, MdChevronRight, MdSearch } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import Table from "./Tables/Table";
 
-import data from "../data/data.js";
+import { data, groupNames } from "../data/data";
 
 const MedicineList = () => {
   const navigateTo = useNavigate();
@@ -81,7 +81,7 @@ const MedicineList = () => {
               }}
             >
               <option value="">- Select Group -</option>
-              {data.map((item, index) => (
+              {groupNames.map((item, index) => (
                 <option key={index} value={item.groupName}>
                   {item.groupName}
                 </option>
