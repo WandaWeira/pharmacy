@@ -16,7 +16,8 @@ const MedicineList = () => {
   let filteredMedicines = data.filter(
     (medicine) =>
       medicine.medicineName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      medicine.groupName.toLowerCase().includes(searchTerm.toLowerCase())
+      medicine.groupName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      medicine.stockInQty.includes(searchTerm)
   );
 
   filteredMedicines = filterTerm
@@ -75,7 +76,7 @@ const MedicineList = () => {
             <BsFunnel />
             <select
               type="input"
-              className="w-[217px] h-[38px] focus:outline-none bg-white rounded border border-gray-800 border-opacity-30"
+              className="w-[217px] h-[38px] focus:outline-none bg-white rounded border border-gray-800 border-opacity-30  truncate overflow-x-auto"
               onChange={({ target }) => {
                 setFilterTerm(target.value);
                 setSearchTerm("");
