@@ -104,7 +104,7 @@ const SideBar = () => {
             </div>
           </SideBarItem>
           <SideBarItem
-            dest="#"
+            dest="reports"
             text="Reports"
             chevron={subReportsVisibility}
             icon={<TbReportAnalytics className="text-white" />}
@@ -113,7 +113,7 @@ const SideBar = () => {
             }
           >
             <div className="bg-slate-900">
-              <Link to="#">
+              <Link to="salesReport">
                 <div className="place-content-center py-4 px-14 transition duration-300 ease-in-out hover:bg-teal-400 active:bg-teal-400 ">
                   <p className="text-white text-sm font-poppins">
                     Sales Report
