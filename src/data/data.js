@@ -58,7 +58,7 @@ const data = [
   {
     medicineName: "Simvastatin",
     medicineID: "STU505",
-    groupName: "Statins",
+    groupName: "Diuretics",
     stockInQty: "55",
     howToUse: "Take 1 tablet daily in the evening.",
     sideEffects: "Muscle pain, Liver problems",
