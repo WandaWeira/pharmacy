@@ -5,6 +5,7 @@ import { FaRegFileExcel, FaRegFilePdf } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Chart from "./Chart";
 
 const SalesReport = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -168,6 +169,18 @@ const SalesReport = () => {
               <IoIosArrowDown className="text-gray-500" />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="flex justify-between gap-5">
+        <div className="border border-gray-300 w-full p-2">
+          <span>Sales mode</span>
+          <hr className="border-gray-300 my-2" />
+          <Chart />
+        </div>
+        <div className="border border-gray-300 w-full p-2">
+          <span>Sales mode</span>
+          <hr className="border-gray-300 my-2" />
+          {/* <Chart /> */}
         </div>
       </div>
     </>
